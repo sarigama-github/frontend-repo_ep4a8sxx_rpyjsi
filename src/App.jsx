@@ -1,15 +1,23 @@
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
+import ParallaxHero from './components/ParallaxHero'
+import InteractiveLab from './components/InteractiveLab'
 import Collection from './components/Collection'
+import SplitReveal from './components/SplitReveal'
 import Lookbook from './components/Lookbook'
+import Marquee from './components/Marquee'
+import Cursor from './components/Cursor'
 
 function App() {
   return (
     <div className="min-h-screen bg-white text-gray-900">
+      <Cursor />
       <Navbar />
 
       <main>
-        <Hero />
+        <ParallaxHero />
+        <Marquee />
+        <InteractiveLab />
+        <SplitReveal />
         <Collection />
         <section className="py-8">
           <div className="mx-auto max-w-7xl px-6">
