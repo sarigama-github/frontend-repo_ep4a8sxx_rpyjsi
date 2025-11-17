@@ -1,6 +1,5 @@
 import Navbar from './components/Navbar'
-import HyperHero from './components/HyperHero'
-import AudioReactiveBG from './components/AudioReactiveBG'
+import CinematicHero from './components/CinematicHero'
 import InteractiveLab from './components/InteractiveLab'
 import Collection from './components/Collection'
 import SplitReveal from './components/SplitReveal'
@@ -15,15 +14,25 @@ function App() {
       <Navbar />
 
       <main>
-        <div className="relative">
-          <AudioReactiveBG />
-          <HyperHero />
+        {/* Cinematic hero with video background and dynamic lighting */}
+        <CinematicHero />
+
+        {/* Liquid-esque divider */}
+        <div className="relative isolate -mt-16">
+          <svg className="block w-full text-white" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden>
+            <path fill="currentColor" d="M0,96L60,85.3C120,75,240,53,360,64C480,75,600,117,720,122.7C840,128,960,96,1080,74.7C1200,53,1320,43,1380,37.3L1440,32L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z" />
+          </svg>
         </div>
-        <Marquee text="FLARE // DROP VII // PHASE-SHIFT MESH // WATER REPELLENT // SEAM SEALED // " />
+
+        <Marquee text="FLARE // ARCHIVE // TECH MESH // WATER REPELLENT // LASER CUT // REINFORCED KNEE // REFLECTIVE PIPING // "/>
+
+        {/* Product interaction + editorial reveals */}
         <div className="bg-white text-gray-900">
           <InteractiveLab />
           <SplitReveal />
           <Collection />
+
+          {/* Newsletter / community */}
           <section className="py-8">
             <div className="mx-auto max-w-7xl px-6">
               <div className="rounded-3xl bg-gradient-to-r from-black to-gray-700 text-white p-10 md:p-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
@@ -39,6 +48,7 @@ function App() {
               </div>
             </div>
           </section>
+
           <Lookbook />
         </div>
       </main>
